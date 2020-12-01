@@ -1,0 +1,72 @@
+--Creación del módulo de layout
+
+ng g m layout 
+
+
+--Creacion de componentes internos
+
+ng g c layout/header --export=true
+ng g c layout/footer --export=true
+ng g c layout/nav 
+
+--Crear modulo con Materials
+
+ng g m material
+
+--Agregar home
+
+ng g c home
+
+--agregar modulo de libros
+
+ng g m catalogue --routing true --route catalogue --module app.module
+
+
+--agregar modulo para modelo
+
+ng g m model --module app.module
+ng g i model/book
+
+
+--submodulos para gestion de libros
+
+ng g c catalogue/add-modify
+
+ng g c catalogue/detail
+
+
+--interfaz para lo objetos Libro
+ng g i model/book
+
+--servicio para el CRUD con localstorage
+ng g s services/bookManagament
+
+
+--Para reactive Form
+
+<mat-form-field>
+    <mat-label>Resumen</mat-label>
+    <input matInput type="text" formControlName ="abstract">
+    <mat-error *ngIf="abstract.invalid">{{getErrorMessage()}}</mat-error>
+</mat-form-field>
+
+2º Parte:
+
+--Pipe para cambio moneda
+
+ng g m pipes --module app.module
+ng g p pipes/ex-rate
+
+test
+ng g p catalogue/ex-rate
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+<section>
+    <header>
+        <mat-toolbar color=accent>
+            <mat-toolbar-row>
+                <span>{{action}} libro</span>
+                <span class="toolbar"></span>
+                <a routerLink="/catalogue">
+                    <button mat-raised-button focusable="false">
+                    <mat-icon>reply</mat-icon>
+                    <span>Volver</span>
+                    </button>
+                </a>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </header>
+
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <mat-label>Título</mat-label>
+            <input matInput type="text" formControlName ="title">
+            <!-- <span style="color:red">{{getError("title")}}</span> -->
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Resumen</mat-label>
+            <input matInput type="text" formControlName ="abstract">
+            <!-- <span style="color:red">{{getError("abstract")}}</span> -->
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-label>ISBN</mat-label>
+            <input matInput type="text" formControlName ="isbn">
+            <!-- <span style="color:red">{{getError("isbn")}}</span> -->
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-label>Precio</mat-label>
+            <input matInput type="number" formControlName ="price">
+            <!-- <span style="color:red">{{getError("price")}}</span> -->
+        </mat-form-field>
+
+        <button mat-raised-button focusable="false" [disabled]= "formGroup.invalid" >{{action}}</button>
+    </form>
+</section>
+

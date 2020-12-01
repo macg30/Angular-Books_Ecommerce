@@ -1,0 +1,17 @@
+.booktitle {
+    font-size: 40px;
+}
+.title {
+    flex: 0.5 1 auto;
+}
+.toolbar {
+    flex: 1 1 auto;
+}
+.card {
+    max-width: 400px;
+    margin: 10px 10px;
+  }
+.detail {
+    display: flex;
+    flex-direction: row;
+}

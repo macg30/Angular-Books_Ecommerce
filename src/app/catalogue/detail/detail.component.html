@@ -1,0 +1,50 @@
+<mat-toolbar color=primary>
+  <mat-toolbar-row>
+    <span>Detalle del libro</span>
+      <span class="toolbar"></span>
+      <a routerLink="/catalogue">
+        <button mat-raised-button focusable="false">
+          <mat-icon>reply</mat-icon>
+          <span>Volver</span>
+        </button>
+      </a>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <span class="title"></span>
+    <span class="booktitle">{{book.title}}</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<section class="detail">
+  <mat-card class="card">
+    <mat-card-content>
+      <p>
+        {{book.abstract}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+  <span class="toolbar"></span>
+
+  <mat-card class="card">
+    <mat-card-content>
+      <p>
+        ISBN:
+      </p>
+      <p>
+        {{book.isbn}}
+      </p>
+      <p>
+        Precio:
+      </p>
+      <p>
+        {{book.price}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="accent">Comprar</button>
+      <button mat-button>Compartir</button>
+    </mat-card-actions>
+  </mat-card>
+</section>

@@ -1,0 +1,18 @@
+<button mat-mini-fab color="primary" [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+</button>
+
+<mat-menu #menu="matMenu">
+  <a routerLink="">
+    <button mat-menu-item>
+      <mat-icon>home</mat-icon>
+      <span>Inicio</span>
+    </button>
+  </a>
+  <a routerLink="catalogue">
+    <button mat-menu-item>
+      <mat-icon>book</mat-icon>
+      <span>Catálogo</span>
+    </button>
+  </a>
+</mat-menu>
