@@ -1,6 +1,9 @@
 {
   "name": "angular-books_ecommerce",
   "version": "0.0.0",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve --aot -o --port 4271",
