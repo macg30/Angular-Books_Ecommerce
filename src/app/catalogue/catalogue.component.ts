@@ -3,6 +3,7 @@ import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import { BookManagamentService } from '../services/book-managament.service';
+import { UseExistingWebDriver } from 'protractor/built/driverProviders';
 
 
   interface Resource {
@@ -34,7 +35,8 @@ export class CatalogueComponent implements OnInit {
   booklist: Book[]
   header: string[]
   dataSource: MatTableDataSource<Book>;
-  moneyType: string[]
+  moneyType: string[];
+  selectedType:string;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -48,7 +50,9 @@ export class CatalogueComponent implements OnInit {
   ngOnInit(): void {
     this.moneyType = [
       'EUR', 'USD', 'GBP'
-    ]
+    ];
+
+    this.selectedType = 'EUR';
 
     //filter for ISBN
     this.dataSource.filterPredicate = (data: Book, filter: string) => {
