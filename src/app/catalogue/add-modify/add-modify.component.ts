@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute} from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 import { BookManagamentService } from 'src/app/services/book-managament.service';
 
 interface Resource {
@@ -34,7 +34,7 @@ export class AddModifyComponent implements OnInit {
   private parameter:Book;
   public action:string;
 
-  constructor(private formBuilder:FormBuilder, private bookManagament:BookManagamentService, private route: ActivatedRoute) { }
+  constructor(private formBuilder:FormBuilder, private bookManagament:BookManagamentService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const isbn = this.route.snapshot.paramMap.get('isbn');
@@ -59,10 +59,10 @@ export class AddModifyComponent implements OnInit {
     let phPrice;
 
     if (this.new) {
-      phTitle = 'Angular 10';
-      phAbstract = 'Libro para desarrolladores sin experiencia en Angular...';
-      phIsbn = '1985170280';
-      phPrice = 50.90;
+      phTitle = '';
+      phAbstract = '';
+      phIsbn = '';
+      phPrice = 0;
     } else {
       phTitle = this.parameter.title;
       phAbstract = this.parameter.abstract;
@@ -122,6 +122,8 @@ export class AddModifyComponent implements OnInit {
       this.bookManagament.modifyBook(this.parameter.isbn,book)
       console.log('Se modifica un libro existente')
     }
+
+    this.router.navigate(['/catalogue']);
     
   }
 

@@ -3,7 +3,7 @@ form {
     margin: 0px 20px;
     border: 1pt solid black;
     border-radius: 10px;
-    background: rgb(59, 42, 90);
+    background: #69f0ae;
     display: flex;
     flex-direction: column;
 }
@@ -14,12 +14,15 @@ mat-form-field {
     padding: 10px 40px;
 }
 section {
-    background: #7b1fa2;
+    background:  black;
     padding-bottom: 10px;
 }
 input {
-    color: blanchedalmond;
+    color:black;
 }
 header {
     margin-bottom: 10px;
+}
+mat-label {
+    color: black;
 }

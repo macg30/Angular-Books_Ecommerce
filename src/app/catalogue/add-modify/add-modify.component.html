@@ -1,6 +1,6 @@
 <section>
     <header>
-        <mat-toolbar color=accent>
+        <mat-toolbar color=primary>
             <mat-toolbar-row>
                 <span>{{action}} libro</span>
                 <span class="toolbar"></span>
@@ -17,25 +17,25 @@
     <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
         <mat-form-field>
             <mat-label>Título</mat-label>
-            <input matInput type="text" formControlName ="title">
+            <input matInput type="text" formControlName ="title" placeholder="Angular 10">
             <!-- <span style="color:red">{{getError("title")}}</span> -->
         </mat-form-field>
 
         <mat-form-field>
             <mat-label>Resumen</mat-label>
-            <input matInput type="text" formControlName ="abstract">
+            <input matInput type="text" formControlName ="abstract" placeholder="Libro para desarrolladores sin experiencia en Angular...">
             <!-- <span style="color:red">{{getError("abstract")}}</span> -->
         </mat-form-field>
         
         <mat-form-field>
             <mat-label>ISBN</mat-label>
-            <input matInput type="text" formControlName ="isbn">
+            <input matInput type="text" formControlName ="isbn" placeholder="1985170280">
             <!-- <span style="color:red">{{getError("isbn")}}</span> -->
         </mat-form-field>
         
         <mat-form-field>
             <mat-label>Precio</mat-label>
-            <input matInput type="number" formControlName ="price">
+            <input matInput type="number" formControlName ="price" placeholder="50.90">
             <!-- <span style="color:red">{{getError("price")}}</span> -->
         </mat-form-field>
 

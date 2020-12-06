@@ -20,10 +20,6 @@ export class ExRatePipe implements PipeTransform {
       console.log('Se mantiene la moneda');
       return euros;
     }
-    else if ( symbol === 'EUR') {
-      console.log('Se mantiene la moneda');
-      return euros;
-    }
     else
     {
       return this.getCotizacionesOnline$(symbol).pipe(

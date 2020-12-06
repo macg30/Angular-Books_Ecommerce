@@ -1,3 +1,24 @@
 <mat-toolbar color=accent>
     <span>¡Bienvenido!</span>
+
 </mat-toolbar>
+
+<mat-card class="card abstract">
+    <mat-card-title>
+        Esta app tiene como objetivo
+    </mat-card-title>
+    <mat-card-content>
+      <p>
+        Facilitar las gestión de libros relacionados con el framework de Angular mediante el uso de formularios 
+        reactivos y el uso de LocalStorage como estrategia de persistencia. Además utiliza un web service de terceros 
+        para obtener el importe equivalente con respecto al EUR, según la tasa de cambio actual.
+      </p>
+      <p>
+        Para hacer una carga inicial de libros presiona este botón:
+      </p>
+      <button mat-button color="accent" (click)="loadBooks()">Cargar libros</button>
+    </mat-card-content>
+    
+</mat-card>
+
+

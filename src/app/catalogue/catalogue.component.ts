@@ -70,7 +70,6 @@ export class CatalogueComponent implements OnInit {
     const filterValue:string = (event.target as HTMLInputElement).value;
     console.log(filterValue);
 
-    //this.dataSource.filter = filterValue.trim().toLowerCase();
     this.dataSource.filter = filterValue.toString();
 
     if (this.dataSource.paginator) {
@@ -83,7 +82,6 @@ export class CatalogueComponent implements OnInit {
     this.bookManagament.deleteBook(isbn)
 
     this.refreshBookList();
-    console.log('Se elimina el libro' + isbn)
   }
 
   refreshBookList() {
