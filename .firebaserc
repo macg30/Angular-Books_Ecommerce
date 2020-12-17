@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angularbooksecommerce": {
+      "hosting": {
+        "angular-books_ecommerce": [
+          "angularbooksecommerce"
+        ]
+      }
+    }
+  }
+}
